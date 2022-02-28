@@ -121,17 +121,17 @@ body {
 
 }
 
-.shorten-input-div{
-    display: flex;
+.shorten-input-div {
+  display: flex;
   justify-content: space-between;
 }
 
-.error{
+.error {
   position: absolute;
   padding: 5px;
   color: #eb5858;
   font-style: italic;
-  
+  display: none;
 }
 
 .shortening-input {
@@ -156,10 +156,41 @@ body {
   height: 62px;
 }
 
-.shorten-list{
+.shorten-list {
   max-width: 1200px;
   padding: 80px 32px 0 32px;
   margin: 0 auto;
+}
+
+.list-item {
+  list-style: none;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-div {
+  display: flex;
+  align-items: center;
+}
+
+.shorten-link {
+  color: #30d0d0;
+}
+
+.copy-btn {
+  margin-left: 20px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #30d0d0;
+  font-weight: 700;
 }
 
 .details-section {
@@ -305,6 +336,6 @@ footer {
   text-align: center;
 }
 
-.social-media-div img{
+.social-media-div img {
   margin: 0 10px;
 }
