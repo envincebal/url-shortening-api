@@ -1,0 +1,37 @@
+@media(max-width: 768px) {
+
+  .intro-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .intro-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .intro-img {
+    width: 100%;
+  }
+
+  .intro-text h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .shorten-input-div {
+    flex-direction: column;
+  }
+
+  .shortening-input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .shorten-btn {
+    width: 100%;
+  }
+}
