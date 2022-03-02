@@ -2,7 +2,46 @@
 // shrtcode API
 // https://shrtco.de/
 
+let modalToggle = false;
+const mobileModalContainer = document.querySelector(".mobile-modal-container");
+const mobileModal = document.querySelector(".mobile-modal");
 
+
+// window.onload = function () {
+//   if (window.innerWidth > 768 || !modalToggle) {
+//     mobileModalContainer.style.display = "none";
+//     mobileModal.style.display = "none";
+//   } else {
+//     mobileModalContainer.style.display = "block";
+//     mobileModal.style.display = "block";
+//   }
+// };
+
+window.onresize = function () {
+
+  if (!modalToggle || window.innerWidth > 768) {
+    mobileModalContainer.style.display = "none";
+    mobileModal.style.display = "none";
+  }
+  if (modalToggle && window.innerWidth < 768) {
+    mobileModalContainer.style.display = "block";
+    mobileModal.style.display = "block";
+  }
+};
+
+document.querySelector(".mobile-menu-icon").addEventListener("click", () => {
+
+  if (!modalToggle) {
+    modalToggle = true;
+    mobileModalContainer.style.display = "block";
+    mobileModal.style.display = "block";
+
+  } else {
+    modalToggle = false;
+    mobileModalContainer.style.display = "none";
+    mobileModal.style.display = "none";
+  }
+});
 
 document.querySelector(".shorten-btn").addEventListener("click", () => {
   const shortenInput = document.querySelector(".shortening-input");
@@ -24,11 +63,8 @@ document.querySelector(".shorten-btn").addEventListener("click", () => {
       if (err) {
         shortenInput.style.border = "3px solid #eb5858";
         error.style.display = "inline-block";
-      } else {
-
       }
     });
-
 });
 
 function addLinkItem(original, shorten) {
@@ -46,10 +82,15 @@ function addLinkItem(original, shorten) {
   shortenLink.classList.add("shorten-link");
   copyBtn.classList.add("copy-btn");
 
-  enteredLink.textContent = String(original);
+  if (original.length > 65) {
+    enteredLink.textContent = String(original).substring(0, 65) + "...";
+  } else {
+    enteredLink.textContent = String(original)
+  }
   shortenLink.textContent = shorten;
   copyBtn.textContent = "Copy";
   shortenLink.setAttribute("href", original);
+  console.log(original.length);
 
   shortenList.appendChild(listItem);
   listItem.appendChild(enteredLink);

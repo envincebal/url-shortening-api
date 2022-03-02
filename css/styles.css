@@ -41,17 +41,16 @@ body {
   font-weight: 700;
 }
 
-.link {
+.link a {
   color: #bfbfbf;
 }
 
 .nav-links {
-  margin: 0 0 0 70px;
+  margin-left: 15px;
   display: flex;
-}
-
-.nav-links a {
-  margin: 0 50px 0 0;
+  justify-content: space-around;
+  list-style: none;
+  width: 40%;
 }
 
 .registration a {
@@ -59,9 +58,71 @@ body {
   padding: 10px 25px;
 }
 
-.login {}
+.login {
+  color: #bfbfbf;
+}
 
-.intro-section {}
+.mobile-modal-container {
+  position: relative;
+  display: none;
+}
+
+.mobile-modal {
+  position: absolute;
+  padding: 30px;
+  background-color: #3b3054;
+  border-radius: 10px;
+  transform: translateY(-35px);
+  width: 100%;
+  display: none;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-nav-links hr {
+  background-color: #838383;
+  height: 1px;
+  border: none;
+}
+
+.mobile-link {
+  padding: 25px;
+  font-size: 24px;
+}
+
+.mobile-link a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mobile-signup {
+  background-color: #2acfcf;
+  color: #fff;
+  border-radius: 100px;
+  width: 100%;
+}
+
+.mobile-menu-icon {
+  width: 40px;
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu-bar {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  border-radius: 5px;
+}
+
+.intro-section {
+  position: relative;
+}
 
 .intro-container {
   display: flex;
@@ -72,7 +133,10 @@ body {
 
 .intro-text {
   width: 40%;
+}
 
+.get-started{
+  font-weight: 700;
 }
 
 .intro-img {
@@ -116,12 +180,10 @@ body {
   transform: translateY(65px);
   max-width: 1146px;
   margin: 0 auto;
-
 }
 
 .shorten-input-div {
   display: flex;
-
 }
 
 .error {
@@ -138,18 +200,18 @@ body {
   margin: 0 20px 0 0;
   font-size: 25px;
   border: 2px solid transparent;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .shorten-btn {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   width: 130px;
   color: #fff;
   background-color: #2acfcf;
   border: none;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 5px;
   float: right;
   height: 62px;
 }
@@ -180,9 +242,14 @@ body {
   color: #30d0d0;
 }
 
+.entered-link{
+  white-space: pre-line;
+	word-break: break-all;
+}
+
 .copy-btn {
   margin-left: 20px;
-  padding: 10px 25px;
+  padding: 15px 25px;
   border-radius: 5px;
   border: none;
   font-size: 18px;
@@ -267,11 +334,12 @@ body {
   background-position: right;
   background-repeat: no-repeat;
   min-height: 250px;
+  padding: 50px 0;
 }
 
 .boost-div {
   margin: 0 auto;
-  transform: translateY(50%);
+
   max-width: 1200px;
   padding: 0 32px;
   text-align: center;

@@ -1,4 +1,19 @@
+
+
 @media(max-width: 768px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links-container {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: initial;
+  }
 
   .intro-container {
     display: flex;
@@ -18,8 +33,13 @@
   }
 
   .intro-text h1 {
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 42px;
+    line-height: 55px;
+  }
+
+  .shorten-it-div{
+    transform: translateY(105px);
+    padding: 35px 20px;
   }
 
   .shorten-input-div {
@@ -28,10 +48,116 @@
 
   .shortening-input {
     width: 100%;
+    font-size: 14px;
     margin-bottom: 20px;
   }
 
   .shorten-btn {
     width: 100%;
+    font-size: 16px;
+    height: 46px;
   }
-}
+
+  .shorten-list{
+    padding: 120px 32px 0 32px;
+  }
+
+  .list-item {
+    text-align: center;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .entered-link,
+  .copy-div,
+  .shorten-link,
+  .copy-btn {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+  }
+
+  .shorten-link{
+    margin: 20px 0;
+  }
+
+  .copy-btn{
+    margin: 0;
+  }
+
+  .details-title {
+    font-size: 30px;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .features:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 700px;
+    width: 8px;
+    background-color: #2acfcf;
+    content: " ";
+    margin: 0 auto;
+    z-index: 0;
+  }
+
+  .features-box {
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .separate-bars {
+    background-color: #2acfcf;
+    width: 100px;
+    height: 8px;
+
+  }
+
+  .features-icon {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .boost-section {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .boost-div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .boost-title {
+    font-size: 26px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+  }
+
+  .logo-div,
+  .social-media-div,
+  .footer-links-container {
+    width: 100%;
+  }
+
+  .logo-div,
+  .footer-links-container,
+  .links-div {
+    margin-bottom: 20px;
+  }
