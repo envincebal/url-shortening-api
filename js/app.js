@@ -6,17 +6,6 @@ let modalToggle = false;
 const mobileModalContainer = document.querySelector(".mobile-modal-container");
 const mobileModal = document.querySelector(".mobile-modal");
 
-
-// window.onload = function () {
-//   if (window.innerWidth > 768 || !modalToggle) {
-//     mobileModalContainer.style.display = "none";
-//     mobileModal.style.display = "none";
-//   } else {
-//     mobileModalContainer.style.display = "block";
-//     mobileModal.style.display = "block";
-//   }
-// };
-
 window.onresize = function () {
 
   if (!modalToggle || window.innerWidth > 768) {
