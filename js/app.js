@@ -47,6 +47,8 @@ document.querySelector(".shorten-btn").addEventListener("click", () => {
 
       shortenInput.style.border = "none";
       error.style.display = "none";
+
+      shortenInput.value = "";
     }).catch(err => {
 
       if (err) {
@@ -79,7 +81,6 @@ function addLinkItem(original, shorten) {
   shortenLink.textContent = shorten;
   copyBtn.textContent = "Copy";
   shortenLink.setAttribute("href", original);
-  console.log(original.length);
 
   shortenList.appendChild(listItem);
   listItem.appendChild(enteredLink);
@@ -91,6 +92,13 @@ function addLinkItem(original, shorten) {
     const copiedLink = e.target.previousElementSibling.textContent;
 
     navigator.clipboard.writeText(copiedLink);
-  });
 
+    e.target.style.backgroundColor = "#4b3f6b";
+    e.target.textContent = "Copied!";
+
+    setTimeout(() => {
+      e.target.style.backgroundColor = "#2acfcf";
+      e.target.textContent = "Copy";
+    }, 2000);
+  });
 }
